@@ -1,17 +1,23 @@
 var myApp = angular.module('myApp', []);
 
-myApp.factory('EmplayeeData', function(){
+myApp.factory('SomeTestData', function(){
 
-    var myDataList = {};
-    var myDataList.items = [
-    { name: "a", position: "ddd" },
-    { name: "s", position: "ddd" },
-    { name: "d", position: "ddd" },
-    { name: "f", position: "sss" }
+    var TestData = {};
+    TestData.items = [
+    { name: "John Ryan", position: "Da Bozz" },
+    { name: "Frank", position: "Engineer" },
+    { name: "Jim", position: "Chef" },
+    { name: "George", position: "Chef" },
+	{ name: "Bill", position: "Engineer" },
+	{ name: "Chichen", position: "Engineer" },
+	{ name: "Dude", position: "Engineer" },
+	{ name: "Dudette", position: "Chef" },
+	{ name: "Georgeette", position: "Secretary" },
+	{ name: "Fran", position: "Secretary" },
     ]
-    return myDataList;
+    return TestData;
 })
 
-function EmployeeDataCtrl($scope, EmployeeData){
-  $scope.employees = EmployeeData;
+function TestDataCtrl($scope, SomeTestData){
+  $scope.someTestData = SomeTestData;
 }
