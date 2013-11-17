@@ -1,4 +1,5 @@
 var express = require('express');
+var fs = require("fs");
 var app = express();
 
 app.use(express.static(__dirname + '/public'));
@@ -8,14 +9,9 @@ app.get('/', function(req, res) {
 });
 
 app.get('/data', function(req, res) {
-   var TestData = {};
-    TestData.items = [
-    { name: "John Ryan", position: "Da Bozz" },
-    { name: "Frank", position: "Engineer" },
-   
-    ]
-   
-   res.json(TestData) ;
+	console.log("here");
+   var file = fs.readFileSync("public/data/cast.json", "utf-8" );
+   res.json(JSON.parse(file)) ;
 }); 
  
 app.listen(3000);

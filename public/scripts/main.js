@@ -1,30 +1,24 @@
 var myApp = angular.module('myApp', []);
 
-myApp.factory('SomeTestData', function(){
+// Create some test data in a service
+myApp.factory('MovieData', function(){
 
-    var TestData = {};
-    TestData.items = [
-    { name: "John Ryan", position: "Da Bozz" },
-    { name: "Frank", position: "Engineer" },
-    { name: "Jim", position: "Chef" },
-    { name: "George", position: "Chef" },
-	{ name: "Bill", position: "Engineer" },
-	{ name: "Chichen", position: "Engineer" },
-	{ name: "Dude", position: "Engineer" },
-	{ name: "Dudette", position: "Chef" },
-	{ name: "Georgeette", position: "Secretary" },
-	{ name: "Fran", position: "Secretary" },
+    var MovieData = {};
+    MovieData.items = [
+	{ name: "Monsters Inc 2", year: "2013" },
+    { name: "Star Wars", year: "1977" },
+	{ name: "Toy Story", year: "1977" },   
     ]
-    return TestData;
+    return MovieData;
 })
 
-function TestStaticDataCtrl($scope, SomeTestData){
-  $scope.someTestData = SomeTestData;
+function TestStaticDataCtrl($scope, MovieData){
+  $scope.movieData = MovieData;
 }
 
-function TestRestfulDataCtrl($scope, $http){
+function TestRestfulMovieDataCtrl($scope, $http){
   $http.get('/data')
        .then(function(res){
-          $scope.someTestData = res.data;                
+          $scope.movieData = res.data;                
         });
 }
