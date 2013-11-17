@@ -18,6 +18,13 @@ myApp.factory('SomeTestData', function(){
     return TestData;
 })
 
-function TestDataCtrl($scope, SomeTestData){
+function TestStaticDataCtrl($scope, SomeTestData){
   $scope.someTestData = SomeTestData;
+}
+
+function TestRestfulDataCtrl($scope, $http){
+  $http.get('/data')
+       .then(function(res){
+          $scope.someTestData = res.data;                
+        });
 }
