@@ -35,7 +35,7 @@
 	</div>
 	<div class="large-6 columns">
 		<div ng-controller="TestRestfulMovieDataCtrl">
-		  <div class="panel">Search : <input type="text" ng-model="searchText"> </div>
+		  <div class="panel">Search : <input type="text" ng-model="search.$"> </div>
 		  
 		  <table class="panel" width=100%>
 			<thead>
@@ -44,9 +44,9 @@
 			  <td>characters</td>
 			</tr>
 			</thead>
-			<tr ng-repeat="item in movieData.cast | filter:searchText">
-			  <td>{{item.name}}</td>
-			  <td>{{item.characters}}</td>
+			<tr ng-repeat="item in movieData.cast | orderBy:'name' | limitTo:20 | filter:search">
+			  <td>{{item.name | lowercase}}</td>
+			  <td>{{item.characters.join()}}</td>
 			</tr>
 		  </table>
 		</div>
