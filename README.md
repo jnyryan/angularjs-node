@@ -6,11 +6,27 @@ and allows client side filtering on the data. It uses nodejs, express and angula
 # Setup
 
 Install nodejs from http://nodejs.org
-download this project and CD to it's directory
+
+Download this project and CD to it's directory
+
+``` bash
+
+git clone https://github.com/patchapps/angularjs-node.git
+	cd angularjs-node.git
+```
+
 To install dependencies run the command:
+
+``` bash
   npm install 
+```
+
 To start the web server run
+
+``` bash
   node app.js
+```
+
 Browse to the application (default is http://localhost:3000)
 
 	
