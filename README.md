@@ -12,7 +12,7 @@ Download this project and CD to it's directory
 ``` bash
 
 git clone https://github.com/patchapps/angularjs-node.git
-	cd angularjs-node.git
+cd angularjs-node.git
 ```
 
 To install dependencies run the command:
