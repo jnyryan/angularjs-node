@@ -24,7 +24,7 @@ To install dependencies run the command:
 To start the web server run
 
 ``` bash
-  node app.js
+  node web.js
 ```
 
 Browse to the application (default is http://localhost:3000)
