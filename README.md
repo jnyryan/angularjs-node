@@ -5,7 +5,7 @@ and allows client side filtering on the data. It uses nodejs, express and angula
 
 ## View Live Demo
 
-    http://yeoman-angular-quickstart.herokuapp.com/
+    http://angularjs-node-quickstart.herokuapp.com/
 
 # Setup
 
