@@ -40,7 +40,7 @@ Browse to the application (default is http://localhost:3000)
 git init
 git add .
 git commit -m "deploy"
-heroku create yeoman-angular-quickstart
+heroku create
 git push heroku master
 heroku ps:scale web=1
 heroku open
